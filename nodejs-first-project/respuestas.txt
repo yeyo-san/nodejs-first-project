@@ -1,0 +1,78 @@
+1. Filesystem (fs) en Node.js
+El módulo fs en Node.js proporciona una API para interactuar con el sistema de archivos del sistema operativo. Se utiliza para realizar operaciones como leer y escribir archivos, manipular directorios, cambiar permisos y realizar otras tareas relacionadas con el sistema de archivos.
+
+2. ¿Qué es un middleware en Express y cuál es su propósito?
+En Express (un framework de Node.js para construir aplicaciones web), un middleware es una función que tiene acceso al objeto de solicitud (req), al objeto de respuesta (res), y a la siguiente función de middleware en el ciclo de solicitud-respuesta de la aplicación. Su propósito principal es realizar tareas intermedias en el procesamiento de las solicitudes HTTP, como autenticación, registro de solicitudes, manipulación del cuerpo de la solicitud, etc.
+
+3. ¿Qué es un endpoint en una API RESTful y cuál es su función?
+Un endpoint en una API RESTful es un punto final (URL) de acceso a recursos en el servidor. Cada endpoint está asociado con una operación específica sobre los datos, definida por los verbos HTTP como GET, POST, PUT, DELETE, etc. El propósito de un endpoint es permitir que los clientes interactúen con el servidor para crear, leer, actualizar o eliminar recursos.
+
+4. ¿Qué son los verbos HTTP y cuáles son los más comunes?
+Los verbos HTTP son métodos que indican la acción que se desea realizar sobre un recurso identificado por una URL en un servidor. Los más comunes son:
+
+GET: Recupera datos del servidor.
+POST: Crea nuevos datos en el servidor.
+PUT: Actualiza datos existentes en el servidor.
+DELETE: Elimina datos del servidor.
+
+5. ¿Qué es JSON y por qué es utilizado en las API RESTful?
+JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos utilizado en las API RESTful porque es fácil de leer y escribir tanto para humanos como para máquinas. Permite la serialización y deserialización de objetos JavaScript, lo cual es útil para enviar datos estructurados entre cliente y servidor.
+
+6. Envío de datos a lo largo de los verbos HTTP
+
+-Body de una petición: Contiene los datos que se envían desde el cliente al servidor, como en un formulario HTML o en una solicitud API.
+
+-Body de una respuesta: Contiene los datos devueltos por el servidor en respuesta a una solicitud.
+
+-Query de una petición: Son los parámetros de URL que se envían en una solicitud GET.
+
+-Params de una petición: Son parámetros que forman parte de la URL en ciertos frameworks, como Express, capturados mediante comodines en las rutas.
+
+7. Verbo POST
+
+-Propósito: Utilizado para enviar datos al servidor para crear recursos nuevos.
+
+-Cuándo se utiliza: Se usa cuando se quiere enviar datos desde el cliente al servidor, como al enviar un formulario.
+
+-Diferencias con otros verbos: A diferencia de GET (para obtener datos), PUT (para actualizar datos) y DELETE (para eliminar datos), POST crea nuevos datos en el servidor.
+
+-Cómo se envían datos: Los datos se envían en el cuerpo (body) de la solicitud HTTP, generalmente en formato JSON o form-urlencoded.
+
+8. Verbo GET
+
+-Propósito: Utilizado para recuperar datos del servidor.
+
+-Cuándo se utiliza: Se utiliza cuando se quiere obtener información del servidor, como cuando se carga una página web o se recuperan datos específicos.
+
+-Diferencias con otros verbos: No modifica los datos en el servidor; simplemente los obtiene para ser leídos por el cliente.
+
+9. Verbo PUT
+
+-Propósito: Utilizado para actualizar datos existentes en el servidor.
+
+-Cuándo se utiliza: Se usa cuando se quiere modificar datos que ya existen en el servidor, enviando una representación completa del recurso actualizado.
+
+-Diferencias con otros verbos: A diferencia de POST (para crear nuevos datos), PUT modifica datos existentes en el servidor.
+
+10. Verbo DELETE
+
+-Propósito: Utilizado para eliminar datos del servidor.
+
+-Cuándo se utiliza: Se utiliza cuando se quiere eliminar un recurso específico del servidor.
+
+-Diferencias con otros verbos: A diferencia de POST, GET y PUT, DELETE elimina datos en lugar de crear, obtener o actualizarlos.
+
+11. ¿Qué es un status code y cuáles son los más comunes?
+Un status code (código de estado) es un número de tres dígitos devuelto por el servidor HTTP en respuesta a una solicitud. Indica el éxito o el fallo de la solicitud. Algunos de los más comunes son:
+200 OK: Solicitud exitosa.
+400 Bad Request: La solicitud no se pudo entender por el servidor debido a una sintaxis incorrecta.
+404 Not Found: El recurso solicitado no fue encontrado en el servidor.
+500 Internal Server Error: Error genérico en el servidor.
+
+Status Code para verbos específicos
+
+12. POST: 201 Created (cuando se crea un recurso), 400 Bad Request (si la solicitud es incorrecta).
+13. GET: 200 OK (cuando se obtienen datos), 404 Not Found (si el recurso no existe).
+14. PUT: 200 OK (cuando se actualizan los datos), 404 Not Found (si el recurso no existe).
+15. DELETE: 204 No Content (cuando se elimina exitosamente), 404 Not Found (si el recurso no existe).
+Estos status code pueden variar dependiendo de la implementación específica de la API y del servidor que estés utilizando.
